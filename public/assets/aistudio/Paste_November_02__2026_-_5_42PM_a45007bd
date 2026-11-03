@@ -1,0 +1,808 @@
+# PROMPT MESTRE — IMPLEMENTAÇÃO DO SD3 | SHORT DARK TRIAD
+## Assessment COMET — Área ORIGEM
+
+### 1. OBJETIVO DO PROJETO
+
+Desenvolva e implante no Assessment COMET um instrumento completo de avaliação baseado exclusivamente no **SD3 — Short Dark Triad**, desenvolvido por Daniel N. Jones e Delroy L. Paulhus (2014).
+
+O instrumento deverá avaliar três dimensões da personalidade:
+
+1. Maquiavelismo (Machiavellianism).
+2. Narcisismo (Narcissism).
+3. Psicopatia Subclínica (Subclinical Psychopathy).
+
+O teste será incorporado à área **ORIGEM**, cuja finalidade é compreender características relativamente estáveis da personalidade, padrões de funcionamento e aspectos que influenciam a maneira como uma pessoa percebe a si mesma, interpreta situações e se relaciona com outras pessoas.
+
+O projeto deverá entregar:
+
+- Questionário completo.
+- Sistema de aplicação.
+- Algoritmo de pontuação.
+- Interpretação individual das três dimensões.
+- Análise integrada dos resultados.
+- Relatório aprofundado de autoconhecimento.
+- Relatório analítico para empresários, gestores, consultores, coaches e profissionais da área psicológica.
+- Histórico e armazenamento dos resultados, respeitando a arquitetura existente.
+
+**IMPORTANTE: não gere uma versão simplificada do teste. Desenvolva o instrumento e o relatório com profundidade técnica e qualidade profissional.**
+
+---
+
+### 2. FONTE CIENTÍFICA E FIDELIDADE AO INSTRUMENTO
+
+Utilize como fonte primária o artigo original:
+
+Jones, D. N., & Paulhus, D. L. (2014). Introducing the Short Dark Triad (SD3): A Brief Measure of Dark Personality Traits.
+
+Acesse o documento científico disponibilizado como fonte do projeto.
+
+A construção deve respeitar integralmente a estrutura original.
+
+REGRAS OBRIGATÓRIAS:
+
+- Utilizar as 27 questões do instrumento original.
+- Preservar a sequência original.
+- Manter nove questões para cada dimensão.
+- Preservar o sentido psicológico de cada afirmação.
+- Traduzir para o português brasileiro com máxima fidelidade ao original.
+- Não adaptar as perguntas ao ambiente empresarial.
+- Não substituir palavras por expressões motivacionais ou socialmente mais aceitáveis.
+- Não simplificar afirmações que possam perder seu significado.
+- Não criar questões adicionais.
+- Não excluir questões.
+- Não alterar a escala de respostas.
+- Não inventar uma versão própria do SD3.
+
+A tradução deve ser a mais próxima possível do texto original, mantendo clareza e naturalidade em português brasileiro.
+
+Se houver alguma ambiguidade na tradução, priorize o significado psicológico original e registre a decisão de tradução na documentação técnica.
+
+Não apresente uma tradução como psicometricamente validada apenas por ter sido realizada com fidelidade linguística.
+
+**Atenção aos direitos de reprodução:** antes de disponibilizar o questionário em produção comercial, verifique as condições de utilização, reprodução e adaptação do instrumento. Não presuma autorização de uso comercial pelo simples fato de o artigo estar disponível.
+
+---
+
+### 3. ESTRUTURA DO QUESTIONÁRIO
+
+O instrumento deverá conter exatamente 27 afirmações.
+
+Distribuição:
+
+| Dimensão | Quantidade |
+|---|---:|
+| Maquiavelismo | 9 questões |
+| Narcisismo | 9 questões |
+| Psicopatia Subclínica | 9 questões |
+| Total | 27 questões |
+
+Durante a aplicação:
+
+- Não mostrar o nome da dimensão avaliada.
+- Não identificar a qual dimensão pertence cada pergunta.
+- Não apresentar interpretações antes da conclusão.
+- Não indicar respostas consideradas melhores ou piores.
+- Manter a ordem original dos itens.
+- Apresentar uma afirmação por vez ou em blocos visualmente organizados, conforme o padrão de navegação já existente no sistema.
+- Não permitir que o usuário conclua o teste com questões obrigatórias sem resposta.
+
+#### Escala de respostas
+
+Utilizar escala Likert de cinco pontos:
+
+1. Discordo totalmente.
+2. Discordo parcialmente.
+3. Nem concordo, nem discordo.
+4. Concordo parcialmente.
+5. Concordo totalmente.
+
+Apresentar as alternativas de maneira clara, com boa experiência de utilização em computadores e dispositivos móveis.
+
+Não modificar a escala original.
+
+---
+
+### 4. ALGORITMO DE PONTUAÇÃO
+
+Implementar a regra de pontuação original do SD3.
+
+Cada dimensão terá nove questões.
+
+A pontuação deverá ser calculada separadamente para cada dimensão.
+
+#### Questões com pontuação invertida
+
+As questões que devem ter pontuação invertida são:
+
+- Questão 11.
+- Questão 15.
+- Questão 17.
+- Questão 20.
+- Questão 25.
+
+Fórmula:
+
+Resposta corrigida = 6 − resposta original.
+
+Exemplo:
+
+| Resposta original | Pontuação corrigida |
+|---|---:|
+| 1 | 5 |
+| 2 | 4 |
+| 3 | 3 |
+| 4 | 2 |
+| 5 | 1 |
+
+As demais questões mantêm a pontuação original.
+
+#### Cálculo das dimensões
+
+Para cada dimensão:
+
+Pontuação final = soma das nove respostas corrigidas ÷ 9.
+
+O resultado deverá variar entre 1,00 e 5,00.
+
+Apresentar também a pontuação em escala percentual normalizada, quando útil para visualização:
+
+Percentual normalizado = ((média − 1) ÷ 4) × 100.
+
+IMPORTANTE:
+
+- Não confundir percentual normalizado com percentil populacional.
+- Não apresentar percentil sem uma amostra normativa válida.
+- Não criar pontos de corte clínicos ou diagnósticos.
+- Não inventar classificações científicas de intensidade.
+
+O sistema deverá preservar os valores originais e corrigidos para permitir auditoria do resultado.
+
+---
+
+### 5. CONCEITOS DAS TRÊS DIMENSÕES
+
+O relatório deverá explicar cada dimensão de maneira profunda, objetiva e equilibrada.
+
+#### 5.1. MAQUIAVELISMO
+
+Avalia tendências relacionadas ao pragmatismo estratégico, manipulação interpessoal, utilização instrumental das relações, cinismo e disposição para influenciar pessoas e situações em benefício próprio.
+
+Explorar:
+
+- Visão estratégica das relações.
+- Capacidade de influência.
+- Pragmatismo nas decisões.
+- Relação entre objetivos e meios utilizados.
+- Tendência à manipulação.
+- Confiança nas intenções de outras pessoas.
+- Instrumentalização dos relacionamentos.
+- Disposição para contornar regras e convenções.
+- Relação entre ambição e ética.
+
+Apresentar manifestações potencialmente construtivas:
+
+- Planejamento estratégico.
+- Capacidade de negociação.
+- Leitura de cenários e interesses.
+- Pensamento calculado.
+- Controle emocional em situações competitivas.
+- Capacidade de antecipar movimentos.
+
+Apresentar possíveis manifestações disfuncionais:
+
+- Manipulação de pessoas.
+- Desconfiança excessiva.
+- Relações utilitárias.
+- Justificativa de meios inadequados para alcançar objetivos.
+- Dificuldade de estabelecer relações genuínas.
+- Comportamento excessivamente calculista.
+- Uso da influência sem responsabilidade.
+
+Não afirmar que todas essas manifestações necessariamente estarão presentes em quem apresenta uma pontuação elevada. São possibilidades interpretativas que dependem do contexto e de outras evidências.
+
+#### 5.2. NARCISISMO
+
+Avalia características relacionadas à grandiosidade, necessidade de reconhecimento, valorização pessoal, percepção de superioridade, busca por admiração e centralidade do próprio indivíduo.
+
+Explorar:
+
+- Autoimagem.
+- Necessidade de reconhecimento.
+- Busca por admiração.
+- Confiança na própria capacidade.
+- Necessidade de destaque.
+- Percepção de superioridade.
+- Sensibilidade à falta de reconhecimento.
+- Relação com críticas.
+- Necessidade de validação externa.
+- Relação entre autoestima e reconhecimento social.
+
+Apresentar manifestações potencialmente construtivas:
+
+- Autoconfiança.
+- Ambição.
+- Capacidade de assumir protagonismo.
+- Disposição para se destacar.
+- Busca por excelência.
+- Facilidade para se posicionar.
+- Desejo de realizar grandes objetivos.
+
+Apresentar possíveis manifestações disfuncionais:
+
+- Necessidade constante de admiração.
+- Dificuldade em aceitar críticas.
+- Arrogância.
+- Busca excessiva por status.
+- Supervalorização das próprias capacidades.
+- Desvalorização de outras pessoas.
+- Necessidade de centralizar decisões e reconhecimento.
+- Dificuldade de reconhecer erros.
+
+Diferenciar claramente autoconfiança saudável de tendências narcisistas disfuncionais.
+
+Não tratar todo indivíduo com pontuação elevada como arrogante ou incapaz de estabelecer relações saudáveis.
+
+#### 5.3. PSICOPATIA SUBCLÍNICA
+
+Avalia características relacionadas à insensibilidade interpessoal, impulsividade, baixa empatia afetiva, reduzida preocupação com consequências e tendências comportamentais associadas à frieza emocional.
+
+Explorar:
+
+- Sensibilidade às consequências para outras pessoas.
+- Empatia afetiva.
+- Impulsividade.
+- Controle de comportamentos.
+- Reação diante do sofrimento alheio.
+- Responsabilidade interpessoal.
+- Relação com riscos.
+- Frieza em situações de pressão.
+- Consideração das consequências das próprias decisões.
+
+Apresentar possíveis manifestações adaptativas, sem romantizar o construto:
+
+- Menor reatividade emocional em situações difíceis.
+- Capacidade de manter decisões sob pressão.
+- Disposição para assumir riscos.
+- Menor paralisação diante de situações emocionalmente exigentes.
+
+Apresentar possíveis manifestações disfuncionais:
+
+- Insensibilidade ao sofrimento alheio.
+- Impulsividade.
+- Baixa consideração pelas consequências interpessoais.
+- Comportamento irresponsável.
+- Dificuldade de estabelecer vínculos empáticos.
+- Desrespeito a limites.
+- Tomada de decisões sem considerar impactos sobre terceiros.
+
+IMPORTANTE:
+
+Não confundir frieza emocional com maturidade, liderança ou inteligência emocional.
+
+Não apresentar psicopatia subclínica como diagnóstico de transtorno de personalidade antissocial.
+
+---
+
+### 6. ARQUITETURA DO RELATÓRIO
+
+Esta é uma das partes mais importantes do projeto.
+
+O relatório deverá ser profundo, analítico, visualmente profissional e realmente útil para compreender o funcionamento da pessoa.
+
+Não entregar somente gráficos acompanhados de descrições genéricas.
+
+O relatório deverá transformar os resultados em conhecimento aplicável.
+
+Organizar em oito grandes seções.
+
+#### SEÇÃO 1 — IDENTIFICAÇÃO E VISÃO GERAL
+
+Apresentar:
+
+- Nome do participante.
+- Data da avaliação.
+- Nome do instrumento.
+- Objetivo da avaliação.
+- Breve explicação da Tríade Obscura.
+- Explicação das três dimensões.
+- Aviso sobre a natureza não diagnóstica do instrumento.
+
+Título sugerido:
+
+**MAPA DOS TRAÇOS DA PERSONALIDADE — TRÍADE OBSCURA**
+
+Subtítulo:
+
+Compreendendo tendências de influência, reconhecimento, relações interpessoais e tomada de decisão.
+
+#### SEÇÃO 2 — PAINEL GERAL DOS RESULTADOS
+
+Criar um painel visual com as três dimensões.
+
+Apresentar:
+
+- Maquiavelismo.
+- Narcisismo.
+- Psicopatia Subclínica.
+
+Para cada dimensão, apresentar:
+
+- Pontuação média de 1 a 5.
+- Percentual normalizado.
+- Indicador visual de intensidade relativa.
+- Breve descrição interpretativa.
+- Posição comparativa entre as três dimensões do próprio participante.
+
+Utilizar gráfico de barras horizontais e gráfico radar de três eixos.
+
+O radar deverá mostrar as três dimensões, sem criar uma pontuação geral da Tríade Obscura.
+
+Não utilizar o gráfico para sugerir que uma dimensão é necessariamente melhor ou pior que outra.
+
+#### SEÇÃO 3 — ANÁLISE INDIVIDUAL DAS DIMENSÕES
+
+Criar uma página ou bloco específico para cada dimensão.
+
+Cada análise deverá apresentar:
+
+**A. O que essa dimensão avalia**
+
+Explicação clara e aprofundada do construto.
+
+**B. Resultado individual**
+
+Pontuação, representação gráfica e explicação do resultado.
+
+**C. Como essa característica pode aparecer no cotidiano**
+
+Traduzir o resultado em possíveis tendências de comportamento.
+
+**D. Potencialidades**
+
+Quais características associadas ao construto podem ser úteis dependendo da intensidade e do contexto.
+
+**E. Pontos de atenção**
+
+Quais comportamentos podem prejudicar relações, decisões, resultados e desenvolvimento pessoal.
+
+**F. Relações interpessoais**
+
+Como essas tendências podem influenciar confiança, empatia, cooperação, comunicação e vínculos.
+
+**G. Tomada de decisão**
+
+Como a dimensão pode influenciar escolhas, riscos, interesses e prioridades.
+
+**H. Desenvolvimento pessoal**
+
+Quais aspectos merecem atenção e quais competências podem ajudar a construir comportamentos mais equilibrados.
+
+As análises deverão ser individualizadas conforme a pontuação real.
+
+Não utilizar o mesmo texto para todos os participantes.
+
+#### SEÇÃO 4 — ANÁLISE INTEGRADA DA TRÍADE
+
+Esta seção deverá ser especialmente inteligente.
+
+Não analisar as três dimensões isoladamente.
+
+Interpretar a combinação dos resultados.
+
+O sistema deverá identificar qual dimensão apresenta maior pontuação, qual apresenta menor pontuação e como as três se relacionam.
+
+Exemplos de combinações que devem ser consideradas:
+
+**Maquiavelismo elevado + Narcisismo elevado**
+
+Investigar a possível combinação entre pensamento estratégico, busca por reconhecimento, ambição e influência interpessoal.
+
+Pontos de atenção: utilização instrumental das relações, centralização de poder e dificuldade de reconhecer limites.
+
+**Narcisismo elevado + Psicopatia elevada**
+
+Investigar a possível combinação entre necessidade de destaque, baixa sensibilidade interpessoal e disposição para assumir riscos.
+
+Pontos de atenção: decisões centradas no próprio interesse e baixa consideração pelo impacto sobre terceiros.
+
+**Maquiavelismo elevado + Psicopatia elevada**
+
+Investigar a possível combinação entre cálculo estratégico, frieza interpessoal e menor consideração por consequências sociais.
+
+Pontos de atenção: manipulação planejada, instrumentalização das relações e possíveis transgressões de limites.
+
+**As três dimensões elevadas**
+
+Investigar a possível coexistência de tendências estratégicas instrumentais, busca por reconhecimento e insensibilidade interpessoal.
+
+Não apresentar essa combinação como diagnóstico ou prova de periculosidade.
+
+**As três dimensões baixas**
+
+Explorar possíveis tendências de menor identificação com os comportamentos avaliados, sem afirmar automaticamente que o indivíduo é ético, empático ou altruísta.
+
+Também desenvolver interpretações para combinações intermediárias e resultados divergentes.
+
+A análise integrada deverá ser construída a partir dos resultados reais, evitando textos automáticos desconectados dos dados.
+
+Não presumir que uma combinação representa necessariamente um comportamento específico.
+
+#### SEÇÃO 5 — APLICAÇÕES NO CONTEXTO EMPRESARIAL
+
+Esta seção deverá transformar os resultados em informações úteis para empresários, gestores, consultores e profissionais de desenvolvimento humano.
+
+Analisar os três construtos nas seguintes situações:
+
+**1. Liderança**
+
+- Relação com autoridade.
+- Influência sobre pessoas.
+- Delegação.
+- Reconhecimento.
+- Relação com subordinados.
+- Centralização de poder.
+- Consideração das necessidades do time.
+
+**2. Gestão de pessoas**
+
+- Capacidade de construir confiança.
+- Cooperação.
+- Reconhecimento de contribuições.
+- Relação com conflitos.
+- Consideração das necessidades individuais.
+- Potencial de desgaste nas relações profissionais.
+
+**3. Tomada de decisão**
+
+- Pragmatismo.
+- Análise de riscos.
+- Impulsividade.
+- Consideração das consequências.
+- Equilíbrio entre resultados e impactos humanos.
+
+**4. Negociação e influência**
+
+- Persuasão.
+- Capacidade estratégica.
+- Interesses envolvidos.
+- Transparência.
+- Limites éticos.
+- Construção de relações sustentáveis.
+
+**5. Cultura organizacional**
+
+- Impacto potencial sobre confiança.
+- Colaboração.
+- Segurança psicológica.
+- Competição interna.
+- Responsabilidade.
+- Relações de poder.
+
+**6. Sociedade e empreendedorismo**
+
+- Ambição.
+- Competitividade.
+- Resiliência diante de adversidades.
+- Gestão de riscos.
+- Relacionamento com parceiros.
+- Relação entre crescimento e responsabilidade.
+
+Em cada tópico, apresentar:
+
+- Tendências potencialmente favoráveis.
+- Riscos comportamentais.
+- Situações em que essas tendências podem aparecer.
+- Perguntas para reflexão.
+- Recomendações de desenvolvimento.
+
+Não utilizar os resultados para determinar automaticamente se alguém é apto ou inapto para ocupar um cargo.
+
+Não recomendar contratação, demissão ou promoção exclusivamente com base no SD3.
+
+#### SEÇÃO 6 — AUTOCONHECIMENTO E DESENVOLVIMENTO
+
+Criar uma seção prática, individualizada e orientada à reflexão.
+
+Apresentar:
+
+**1. Padrões que merecem ser observados**
+
+Identificar possíveis comportamentos que o participante pode não perceber em si mesmo.
+
+**2. Pontos fortes que precisam ser bem direcionados**
+
+Explicar como características potencialmente úteis podem ser desenvolvidas de maneira responsável.
+
+**3. Pontos cegos comportamentais**
+
+Apresentar hipóteses de comportamentos que podem prejudicar relações e resultados.
+
+**4. Perguntas de autoconhecimento**
+
+Criar pelo menos três perguntas específicas para cada dimensão, considerando o resultado do participante.
+
+Exemplos:
+
+- Quando você busca reconhecimento, está valorizando seu trabalho ou precisa que outras pessoas confirmem constantemente seu valor?
+- Em quais situações você utiliza sua capacidade de influência sem considerar suficientemente o impacto sobre outras pessoas?
+- Quando precisa tomar uma decisão difícil, consegue considerar as consequências humanas ou tende a priorizar exclusivamente o resultado?
+
+Esses exemplos não devem ser repetidos indiscriminadamente. O sistema deverá elaborar perguntas coerentes com o perfil avaliado.
+
+**5. Plano de desenvolvimento**
+
+Apresentar de três a cinco recomendações práticas, priorizadas conforme os resultados.
+
+Cada recomendação deverá conter:
+
+- Comportamento a desenvolver.
+- Por que merece atenção.
+- Ação prática.
+- Situação em que pode ser aplicada.
+- Indicador de evolução.
+
+Não transformar o plano em motivação genérica.
+
+#### SEÇÃO 7 — APLICAÇÃO PARA COACHING, CONSULTORIA E PSICOLOGIA
+
+Criar um bloco técnico destinado a profissionais que utilizam os resultados como apoio em processos de desenvolvimento.
+
+Apresentar:
+
+**Para coaches e mentores:**
+
+- Hipóteses para investigação.
+- Perguntas de aprofundamento.
+- Possíveis padrões de comportamento.
+- Temas que podem ser trabalhados em sessões.
+- Sugestões de acompanhamento.
+
+**Para consultores empresariais:**
+
+- Possíveis impactos na gestão.
+- Relações de liderança.
+- Influência sobre a cultura.
+- Comportamentos que podem comprometer a cooperação.
+- Pontos que merecem observação no ambiente organizacional.
+
+**Para psicólogos e profissionais da área psicológica:**
+
+- Descrição dos construtos avaliados.
+- Resultados quantitativos.
+- Limites interpretativos.
+- Hipóteses para investigação complementar.
+- Aspectos que podem ser aprofundados em entrevista e avaliação profissional.
+
+Deixar explícito que o SD3 é uma medida breve de traços da personalidade e não substitui avaliação psicológica, diagnóstico clínico ou outros procedimentos profissionais.
+
+O resultado não deverá ser tratado isoladamente como evidência suficiente para decisões clínicas.
+
+Não utilizar termos como diagnóstico de psicopatia, diagnóstico de narcisismo ou diagnóstico de transtorno.
+
+#### SEÇÃO 8 — SÍNTESE EXECUTIVA
+
+Encerrar com uma síntese objetiva e personalizada.
+
+Apresentar:
+
+- Dimensão predominante.
+- Dimensão menos expressiva.
+- Principal característica a ser compreendida.
+- Principal potencialidade a ser bem direcionada.
+- Principal ponto de atenção.
+- Recomendação prioritária de desenvolvimento.
+- Pergunta central para reflexão.
+
+Criar um texto de encerramento com profundidade, sem julgamento moral e sem rotular o participante.
+
+---
+
+### 7. MOTOR DE INTERPRETAÇÃO INTELIGENTE
+
+O sistema deverá utilizar uma lógica de interpretação baseada em regras e nos dados efetivamente respondidos.
+
+Não utilizar apenas modelos de textos fixos.
+
+Criar uma estrutura que considere:
+
+1. Pontuação de cada dimensão.
+2. Distância entre as dimensões.
+3. Combinações entre os três resultados.
+4. Intensidade relativa.
+5. Potencialidades associadas.
+6. Possíveis riscos comportamentais.
+7. Contextos em que essas tendências podem aparecer.
+
+O mecanismo deverá diferenciar:
+
+- Resultado individual.
+- Comparação interna entre dimensões.
+- Hipóteses interpretativas.
+- Recomendações de desenvolvimento.
+
+Não criar causalidades que o instrumento não mede.
+
+Não afirmar que a pessoa apresenta determinado comportamento apenas porque obteve determinada pontuação.
+
+Utilizar expressões tecnicamente responsáveis, como:
+
+- Pode indicar.
+- Sugere uma tendência.
+- Merece investigação.
+- Pode se manifestar em determinadas situações.
+- É importante observar.
+- O resultado não permite concluir isoladamente.
+
+---
+
+### 8. IDENTIDADE VISUAL E EXPERIÊNCIA DO RELATÓRIO
+
+Seguir a identidade visual do Instituto COMET.
+
+Características:
+
+- Grafite.
+- Preto.
+- Laranja como cor de destaque.
+- Fundo limpo.
+- Visual contemporâneo.
+- Linguagem empresarial e psicológica profissional.
+- Boa hierarquia visual.
+- Gráficos legíveis.
+- Espaçamento adequado.
+- Tipografia consistente.
+
+O relatório deverá transmitir profundidade, seriedade e qualidade técnica.
+
+Evitar:
+
+- Aparência de teste recreativo.
+- Excesso de elementos decorativos.
+- Linguagem sensacionalista.
+- Imagens sombrias ou ameaçadoras.
+- Classificações morais.
+- Adjetivos que estigmatizem o participante.
+
+A expressão Tríade Obscura poderá ser explicada na introdução, mas o relatório deverá privilegiar a análise técnica dos três construtos.
+
+Criar gráficos com escalas claramente identificadas e sem distorção visual.
+
+---
+
+### 9. ARMAZENAMENTO E INTEGRIDADE DOS DADOS
+
+Respeitar integralmente a arquitetura existente do Assessment COMET.
+
+- Não modificar configurações gerais.
+- Não alterar outros instrumentos.
+- Não modificar algoritmos existentes.
+- Não alterar questionários de outras áreas.
+- Não substituir estruturas de dados já utilizadas sem autorização.
+- Não criar sistemas paralelos desnecessários.
+
+Armazenar:
+
+- Identificação da avaliação.
+- Data de realização.
+- Respostas originais.
+- Respostas corrigidas.
+- Pontuação das três dimensões.
+- Versão do instrumento.
+- Versão da tradução.
+- Resultado interpretativo.
+- Relatório gerado.
+
+Preservar o histórico para futuras comparações, sem apresentar mudanças de pontuação como evidência automática de mudança de personalidade.
+
+Garantir privacidade, controle de acesso e tratamento adequado de dados pessoais sensíveis relacionados à avaliação psicológica.
+
+---
+
+### 10. TESTES DE QUALIDADE E VALIDAÇÃO
+
+Antes de considerar o instrumento concluído, executar testes técnicos.
+
+**Teste 1 — Pontuação mínima**
+
+Todas as respostas iguais a 1.
+
+Verificar as inversões e os resultados finais.
+
+**Teste 2 — Pontuação máxima**
+
+Todas as respostas iguais a 5.
+
+Verificar as inversões e os resultados finais.
+
+**Teste 3 — Pontuação intermediária**
+
+Todas as respostas iguais a 3.
+
+Verificar se as três dimensões apresentam média 3,00.
+
+**Teste 4 — Questões invertidas**
+
+Testar individualmente as cinco questões invertidas.
+
+**Teste 5 — Separação das dimensões**
+
+Confirmar que cada questão alimenta exclusivamente a dimensão correspondente.
+
+**Teste 6 — Relatório**
+
+Confirmar que todas as seções são geradas e que os textos são coerentes com os resultados.
+
+**Teste 7 — Integridade**
+
+Confirmar que o instrumento não altera dados ou funcionalidades de outros testes.
+
+**Teste 8 — Interface**
+
+Testar a aplicação em computador e dispositivos móveis.
+
+Documentar os resultados dos testes.
+
+Não declarar o instrumento psicometricamente validado apenas porque o algoritmo passou nos testes técnicos.
+
+A validação psicométrica exige estudos específicos com amostras adequadas.
+
+---
+
+### 11. REGRAS DE EXECUÇÃO NO GOOGLE AI STUDIO
+
+Antes de realizar qualquer alteração:
+
+1. Analise a estrutura atual do Assessment COMET.
+2. Identifique os padrões existentes de questionários.
+3. Identifique o padrão de geração de relatórios.
+4. Identifique como os resultados são armazenados.
+5. Apresente o planejamento de implantação.
+6. Identifique arquivos e componentes que precisarão ser criados ou alterados.
+7. Explique como será preservada a integridade dos outros instrumentos.
+
+**Não comece a programar antes de apresentar o planejamento.**
+
+Não modifique nada fora do escopo autorizado.
+
+Não substitua funcionalidades existentes.
+
+Não faça refatorações gerais.
+
+Não altere a arquitetura global.
+
+Após a aprovação do planejamento, implemente o teste de maneira modular, respeitando os padrões do sistema.
+
+Se o documento científico ou alguma informação necessária não estiver disponível, solicite o material faltante. Não invente questões, referências ou regras de pontuação.
+
+---
+
+### 12. RESULTADO FINAL ESPERADO
+
+Entregar um instrumento completo, funcional e integrado ao Assessment COMET.
+
+O resultado deverá conter:
+
+- SD3 com 27 questões.
+- Tradução fiel ao original.
+- Algoritmo correto.
+- Pontuação individual das três dimensões.
+- Gráficos profissionais.
+- Análise individual aprofundada.
+- Análise integrada.
+- Aplicações empresariais.
+- Autoconhecimento.
+- Orientações para desenvolvimento.
+- Aplicações para profissionais de desenvolvimento humano e psicológicos.
+- Síntese executiva.
+- Histórico de avaliações.
+- Documentação técnica.
+
+**PRINCÍPIO CENTRAL DO PROJETO:**
+
+O questionário mede traços da personalidade. O relatório deve ajudar a compreender como esses traços podem influenciar pensamentos, decisões, relações e comportamentos.
+
+Não queremos rotular pessoas.
+
+Queremos oferecer informações qualificadas para ampliar o autoconhecimento, identificar possíveis pontos de atenção e orientar o desenvolvimento pessoal e profissional.
+
+**Desenvolva com rigor científico, profundidade analítica, responsabilidade interpretativa e padrão de qualidade COMET.**

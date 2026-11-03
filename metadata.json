@@ -1,0 +1,6 @@
+{
+  "name": "Assessment COMET — Área ORIGEM | SD3 Short Dark Triad",
+  "description": "Instrumento de avaliação psicométrica baseado no SD3 (Short Dark Triad) para o Assessment COMET — Área ORIGEM. Avaliação aprofundada de Maquiavelismo, Narcisismo e Psicopatia Subclínica.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
